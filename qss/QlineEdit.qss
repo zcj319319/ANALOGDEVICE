@@ -1,0 +1,11 @@
+QLineEdit {
+    background: #f3f3f3;
+    background-image: url(:/images/search.png); /* actual size, e.g. 16x16 */
+    background-repeat: no-repeat;
+    background-position: left;
+    color: #252424;
+    font-family: SegoeUI;
+    font-size: 12px;
+    padding: 2 2 2 20; /* left padding (last number) must be more than the icon's width */
+    border: 1px solid #dddddd;
+}

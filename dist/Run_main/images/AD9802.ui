@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1209</width>
+    <height>636</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="1,0">
+    <item>
+     <widget class="QScrollArea" name="scrollArea">
+      <property name="minimumSize">
+       <size>
+        <width>300</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>403</width>
+         <height>594</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_2" rowstretch="1,0,0,0,0">
+        <item row="0" column="0">
+         <widget class="QLabel" name="label">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>12</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>SETTINGS</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_5">
+           <item row="1" column="1" colspan="2">
+            <widget class="QLineEdit" name="file_path_lineinput"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="tool_label">
+             <property name="text">
+              <string>tool</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="file_path_label">
+             <property name="text">
+              <string>file_path</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QToolButton" name="file_toolButton">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="run_btn">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Run</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <selectedon>../images/run-c.png</selectedon>
+              </iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QGroupBox" name="config_gbx">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>164</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>config</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_4">
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="smpBitsMode_txt"/>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLineEdit" name="memoryVol_txt"/>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="sectBits_txt"/>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="wordBits">
+             <property name="text">
+              <string>wordBits</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="sectNum">
+             <property name="text">
+              <string>sectNum</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="sectBits">
+             <property name="text">
+              <string>sectBits</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="memoryVol">
+             <property name="text">
+              <string>memoryVol</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="smpBitsMode">
+             <property name="text">
+              <string>smpBitsMode</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="wordBits_txt"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="sectNum_txt"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="sample_rate">
+             <property name="text">
+              <string>sample_rate</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="sample_rate_txt"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QScrollArea" name="scrollArea_3">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>366</width>
+             <height>618</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QGroupBox" name="groupBox_3">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>600</height>
+               </size>
+              </property>
+              <property name="title">
+               <string>param</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetNoConstraint</enum>
+               </property>
+               <item row="3" column="1">
+                <widget class="QLineEdit" name="sideband_sig_input"/>
+               </item>
+               <item row="22" column="1">
+                <widget class="QLineEdit" name="sig_angle_input"/>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLineEdit" name="fullscale_input"/>
+               </item>
+               <item row="15" column="0">
+                <widget class="QLabel" name="dbc_th_IL">
+                 <property name="text">
+                  <string>dbc_th_IL</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="Rl">
+                 <property name="text">
+                  <string>Rl</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="21" column="0">
+                <widget class="QLabel" name="refclk_ratio">
+                 <property name="text">
+                  <string>refclk_ratio</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLineEdit" name="Rl_input"/>
+               </item>
+               <item row="20" column="0">
+                <widget class="QLabel" name="imd_mode">
+                 <property name="text">
+                  <string>imd_mode</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLineEdit" name="sideband_input"/>
+               </item>
+               <item row="23" column="1">
+                <widget class="QLineEdit" name="dc_1f_noise_cancel_input"/>
+               </item>
+               <item row="18" column="1">
+                <widget class="QLineEdit" name="plot_option_input"/>
+               </item>
+               <item row="17" column="1">
+                <widget class="QLineEdit" name="ENOB_include_HD_input"/>
+               </item>
+               <item row="16" column="0">
+                <widget class="QLabel" name="dbc_th_SFDR">
+                 <property name="text">
+                  <string>dbc_th_SFDR</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="20" column="1">
+                <widget class="QComboBox" name="imd_mode_cmbox">
+                 <item>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="sideband_sig">
+                 <property name="text">
+                  <string>sideband_sig</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="sideband">
+                 <property name="text">
+                  <string>sideband</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0">
+                <widget class="QLabel" name="num_IMD">
+                 <property name="text">
+                  <string>num_IMD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="23" column="0">
+                <widget class="QLabel" name="dc_1f_noise_cancel">
+                 <property name="text">
+                  <string>dc_1f_noise_cancel</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="17" column="0">
+                <widget class="QLabel" name="ENOB_include_HD">
+                 <property name="text">
+                  <string>ENOB_include_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="21" column="1">
+                <widget class="QLineEdit" name="refclk_ratio_input"/>
+               </item>
+               <item row="8" column="1">
+                <widget class="QLineEdit" name="num_IMD_input"/>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLineEdit" name="sigbw_input"/>
+               </item>
+               <item row="6" column="1">
+                <widget class="QLineEdit" name="num_interleave_input"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QLineEdit" name="dpdbw_input"/>
+               </item>
+               <item row="13" column="1">
+                <widget class="QLineEdit" name="dbc_th_HD_input"/>
+               </item>
+               <item row="11" column="1">
+                <widget class="QLineEdit" name="dacOSR_input"/>
+               </item>
+               <item row="13" column="0">
+                <widget class="QLabel" name="dbc_th_HD">
+                 <property name="text">
+                  <string>dbc_th_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="19" column="1">
+                <widget class="QLineEdit" name="figure_overwrite_input"/>
+               </item>
+               <item row="16" column="1">
+                <widget class="QLineEdit" name="dbc_th_SFDR_input"/>
+               </item>
+               <item row="9" column="0">
+                <widget class="QLabel" name="window">
+                 <property name="text">
+                  <string>window</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="0">
+                <widget class="QLabel" name="sigbw">
+                 <property name="text">
+                  <string>sigbw</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="0">
+                <widget class="QLabel" name="plot_range">
+                 <property name="text">
+                  <string>plot_range</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="1">
+                <widget class="QLineEdit" name="nyquitst_zone_input"/>
+               </item>
+               <item row="7" column="0">
+                <widget class="QLabel" name="num_HD">
+                 <property name="text">
+                  <string>num_HD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="num_interleave">
+                 <property name="text">
+                  <string>num_interleave</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="18" column="0">
+                <widget class="QLabel" name="plot_option">
+                 <property name="text">
+                  <string>plot_option</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="1">
+                <widget class="QLineEdit" name="plot_range_input"/>
+               </item>
+               <item row="14" column="1">
+                <widget class="QLineEdit" name="dbc_th_IMD_input"/>
+               </item>
+               <item row="7" column="1">
+                <widget class="QLineEdit" name="num_HD_input"/>
+               </item>
+               <item row="22" column="0">
+                <widget class="QLabel" name="sig_angle">
+                 <property name="text">
+                  <string>sig_angle</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="fullscale">
+                 <property name="text">
+                  <string>fullscale</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="19" column="0">
+                <widget class="QLabel" name="figure_overwrite">
+                 <property name="text">
+                  <string>figure_overwrite</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="11" column="0">
+                <widget class="QLabel" name="dacOSR">
+                 <property name="text">
+                  <string>dacOSR</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="15" column="1">
+                <widget class="QLineEdit" name="dbc_th_IL_input"/>
+               </item>
+               <item row="14" column="0">
+                <widget class="QLabel" name="dbc_th_IMD">
+                 <property name="text">
+                  <string>dbc_th_IMD</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="0">
+                <widget class="QLabel" name="nyquitst_zone">
+                 <property name="text">
+                  <string>nyquitst_zone</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="dpdbw">
+                 <property name="text">
+                  <string>dpdbw</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="9" column="1">
+                <widget class="QLineEdit" name="window_input"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="Diagram">
+       <property name="palette">
+        <palette>
+         <active>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>85</red>
+             <green>170</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </active>
+         <inactive>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>85</red>
+             <green>170</green>
+             <blue>0</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </inactive>
+         <disabled>
+          <colorrole role="Base">
+           <brush brushstyle="SolidPattern">
+            <color alpha="255">
+             <red>240</red>
+             <green>240</green>
+             <blue>240</blue>
+            </color>
+           </brush>
+          </colorrole>
+         </disabled>
+        </palette>
+       </property>
+       <attribute name="icon">
+        <iconset>
+         <selectedoff>../images/Diagram.png</selectedoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Diagram</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="diagram_label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap>../images/diagram_strut.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="FFT">
+       <attribute name="icon">
+        <iconset>
+         <selectedoff>../images/FFT.png</selectedoff>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>FFT</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="1,2">
+        <item>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="maximumSize">
+           <size>
+            <width>278</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>248</width>
+             <height>547</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QGroupBox" name="groupBox_4">
+              <property name="title">
+               <string/>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_5">
+               <item>
+                <widget class="QPushButton" name="reset_btn">
+                 <property name="text">
+                  <string>Reset</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <selectedoff>../images/reset.png</selectedoff>
+                  </iconset>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_5">
+              <property name="title">
+               <string>Signal</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="1" column="1">
+                <widget class="QLabel" name="f1_amplitude_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QLabel" name="f1_frequency_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="f1_amplitude">
+                 <property name="text">
+                  <string>F1 Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QLabel" name="f2_amplitude">
+                 <property name="text">
+                  <string>F2 Amplitude</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QLabel" name="f2_frequency_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <widget class="QLabel" name="f2_frequency">
+                 <property name="text">
+                  <string>F2 Frequency</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QLabel" name="f1_frequency">
+                 <property name="text">
+                  <string>F1 Frequency</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="1">
+                <widget class="QLabel" name="f2_amplitude_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QLabel" name="Offset">
+                 <property name="text">
+                  <string>Offset</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QLabel" name="Offset_text">
+                 <property name="text">
+                  <string/>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_6">
+              <property name="title">
+               <string>Specs</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_7">
+               <item row="0" column="0">
+                <widget class="QTableWidget" name="spec_tableWidget"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupBox_7">
+              <property name="title">
+               <string>Spurs</string>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_6">
+               <item>
+                <widget class="QTableWidget" name="spur_tableWidget"/>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="fft_gragh">
+          <property name="title">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Help">
+       <attribute name="icon">
+        <iconset>
+         <selectedon>../images/Help.png</selectedon>
+        </iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Help</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QTextEdit" name="textEdit">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="html">
+           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'SimSun'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% vin            input&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% fs             total sample rate , for dac, fs=actual dac fs*dacOSR&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% resolution     adc resolution,resolution=0 for dac&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% sigbw          noise calc bw&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% dpdbw          noise calc bw&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% sideband       +/-sideband for every tone, default 100KHz&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% resolution     adc resolution,resolution=0 for dac&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% fullscale      voltage fullscale, mvpp&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% Rl             equivalent R load,default 100ohm&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% num_interleave &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% num_HD&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% window         'non' 'hann' 'black'&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% nyquitst_zone  for rfadc, use this to set correct freq range;for dac set to 1 to avoid errors&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% dacOSR         for dac simulation only, only HD/IL fold to first nyquist zone will be calc/marked&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% plot_range     for dac, 0 'full' zone , 1 first , 2 first+sencond...&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% dbc_th_HD dbc_th_IMD dbc_th_IL dbc_th_SFDR  threshold for whether highlight relative values&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% ENOB_include_HD   whether ENOB include HD&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% plot_option       plot figure or not&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% figure_overwrite  if overwrite=1 figure will always use figure 1 to overwrite last plot&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ff5500;&quot;&gt;% dc_1f_noise_cancel=20e6; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%para%%%%%%%%%%%%%%%%%%%%%%%%%%%%%&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'sigbw')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sigbw=para.sigbw;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sigbw=[0 fs/2];&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dpdbw')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dpdbw=para.dpdbw;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dpdbw=[0 fs/2];&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'sideband')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sideband=para.sideband;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sideband=100e3;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'sideband_sig')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sideband_sig=para.sideband_sig;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sideband_sig=100e3;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'fullscale')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    fullscale=para.fullscale;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    fullscale=1000;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'Rl')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    Rl=para.Rl;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    Rl=100;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'num_interleave')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_interleave=para.num_interleave;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_interleave=1;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'num_HD')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_HD=para.num_HD;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_HD=7;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'num_IMD')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_IMD=para.num_IMD;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    num_IMD=5;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'window')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    window=para.window;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    window='non';&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'nyquitst_zone')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    nyquist_zone=para.nyquitst_zone;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    nyquist_zone=1;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dacOSR')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dacOSR=para.dacOSR;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dacOSR=1;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'plot_range')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    plot_range=para.plot_range;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    plot_range=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dbc_th_HD')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_HD=para.dbc_th_HD;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_HD=-70;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dbc_th_IMD')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_IMD=para.dbc_th_IMD;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_IMD=-70;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dbc_th_IL')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_IL=para.dbc_th_IL;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_IL=-70;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dbc_th_SFDR')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_SFDR=para.dbc_th_SFDR;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dbc_th_SFDR=70;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'ENOB_include_HD')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    ENOB_include_HD=para.ENOB_include_HD;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    ENOB_include_HD=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'plot_option')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    plot_option=para.plot_option;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    plot_option=1;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'figure_overwrite')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    figure_overwrite=para.figure_overwrite;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    figure_overwrite=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'imd_mode')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    imd_mode=para.imd_mode;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    imd_mode=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'refclk_ratio')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    refclk_ratio=para.refclk_ratio;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    refclk_ratio=1;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'sig_angle')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sig_angle=para.sig_angle;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    sig_angle=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if isfield(para,'dc_1f_noise_cancel')&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dc_1f_noise_cancel=para.dc_1f_noise_cancel;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;    dc_1f_noise_cancel=0;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;end      %% add cancel dc  and 1/f noise&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <tabstops>
+  <tabstop>run_btn</tabstop>
+  <tabstop>file_path_lineinput</tabstop>
+  <tabstop>file_toolButton</tabstop>
+  <tabstop>smpBitsMode_txt</tabstop>
+  <tabstop>sectNum_txt</tabstop>
+  <tabstop>sectBits_txt</tabstop>
+  <tabstop>wordBits_txt</tabstop>
+  <tabstop>memoryVol_txt</tabstop>
+  <tabstop>sigbw_input</tabstop>
+  <tabstop>dpdbw_input</tabstop>
+  <tabstop>sideband_input</tabstop>
+  <tabstop>sideband_sig_input</tabstop>
+  <tabstop>fullscale_input</tabstop>
+  <tabstop>Rl_input</tabstop>
+  <tabstop>num_interleave_input</tabstop>
+  <tabstop>num_HD_input</tabstop>
+  <tabstop>num_IMD_input</tabstop>
+  <tabstop>window_input</tabstop>
+  <tabstop>nyquitst_zone_input</tabstop>
+  <tabstop>dacOSR_input</tabstop>
+  <tabstop>plot_range_input</tabstop>
+  <tabstop>dbc_th_HD_input</tabstop>
+  <tabstop>dbc_th_IMD_input</tabstop>
+  <tabstop>dbc_th_IL_input</tabstop>
+  <tabstop>dbc_th_SFDR_input</tabstop>
+  <tabstop>ENOB_include_HD_input</tabstop>
+  <tabstop>plot_option_input</tabstop>
+  <tabstop>figure_overwrite_input</tabstop>
+  <tabstop>imd_mode_cmbox</tabstop>
+  <tabstop>refclk_ratio_input</tabstop>
+  <tabstop>sig_angle_input</tabstop>
+  <tabstop>dc_1f_noise_cancel_input</tabstop>
+  <tabstop>reset_btn</tabstop>
+  <tabstop>scrollArea_2</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>scrollArea_3</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>spec_tableWidget</tabstop>
+  <tabstop>spur_tableWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

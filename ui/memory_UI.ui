@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>599</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox_5">
+      <property name="title">
+       <string/>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_12">
+       <item row="1" column="0">
+        <widget class="QPushButton" name="ApplyChanges">
+         <property name="text">
+          <string>ApplyChanges</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/ui_pr.qrc">
+           <normaloff>:/images/apply.png</normaloff>:/images/apply.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="Export">
+         <property name="text">
+          <string>Export</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/ui_pr.qrc">
+           <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="Resetchip">
+         <property name="text">
+          <string>Reset Chip</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/ui_pr.qrc">
+           <normaloff>:/images/Reset-Settings.png</normaloff>:/images/Reset-Settings.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QPushButton" name="software_defaults">
+         <property name="text">
+          <string>Software Defaults</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../images/ui_pr.qrc">
+           <normaloff>:/images/back.png</normaloff>:/images/back.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="5">
+        <spacer name="horizontalSpacer_8">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0" colspan="5">
+        <widget class="QLineEdit" name="search_register"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTreeWidget" name="func_descibe">
+      <property name="autoScrollMargin">
+       <number>16</number>
+      </property>
+      <attribute name="headerCascadingSectionResizes">
+       <bool>false</bool>
+      </attribute>
+      <attribute name="headerDefaultSectionSize">
+       <number>160</number>
+      </attribute>
+      <column>
+       <property name="text">
+        <string>Address(Hex)</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Functional Group </string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Data(Hex)</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Data(Binary)</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../images/ui_pr.qrc"/>
+ </resources>
+ <connections/>
+</ui>

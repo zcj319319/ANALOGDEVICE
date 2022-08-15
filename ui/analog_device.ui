@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1008</width>
+    <height>810</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,4">
+    <item>
+     <widget class="QListWidget" name="listWidget">
+      <item>
+       <property name="text">
+        <string>Home</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/ui_pr.qrc">
+         <normaloff>:/images/home.png</normaloff>:/images/home.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Initial</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/ui_pr.qrc">
+         <normaloff>:/images/system.png</normaloff>:/images/system.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Memory</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/ui_pr.qrc">
+         <normaloff>:/images/config.png</normaloff>:/images/config.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>FFT</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/ui_pr.qrc">
+         <normaloff>:/images/FFT.png</normaloff>:/images/FFT.png</iconset>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Help</string>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="icon">
+        <iconset resource="../images/ui_pr.qrc">
+         <normaloff>:/images/Help.png</normaloff>:/images/Help.png</iconset>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="home">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="../images/ui_pr.qrc">:/images/taorun.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <pointsize>30</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>上海韬润半导体有限公司</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1008</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="../images/ui_pr.qrc"/>
+ </resources>
+ <connections/>
+</ui>

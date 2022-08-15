@@ -1,0 +1,27 @@
+path='memory_dump_data.txt';
+config.smpBitsMode=256;
+config.sectNum=16;
+config.sectBits=32;
+config.wordBits=8;
+config.memoryVol=2^16;
+para.sigbw=100e6;
+para.dpdbw=300e6;
+para.sideband=3000;
+para.sideband_sig=10e6;
+para.fullscale=1200;
+para.Rl=100;
+para.num_interleave=4;
+para.num_HD=5;
+para.window='hann';
+para.nyquitst_zone=2;
+para.dacOSR=1;
+% para.imd_mode=1;
+para.plot_range=0;
+para.simple_plot=0;
+para.dc_1f_noise_cancel=20e6;      %% add cancel dc  and 1/f noise
+para.dbc_th_HD=-20;                %% not add color for -70dbc
+para.dbc_th_IMD=-20;
+para.dbc_th_IL=-20;    
+para.dbc_th_SFDR=-20;
+pref=memory_data_analyze(path,config,para);
+disp(pref);
