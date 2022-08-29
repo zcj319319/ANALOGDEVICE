@@ -7,20 +7,48 @@ Email   : chunjin.zhu@taurentech.net
 File    : load_memory_ui.py
 Software: PyCharm
 '''
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QTreeWidgetItem, QHeaderView
+import time
+from os import path
 
+import xlwt
+from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QTreeWidgetItem, QHeaderView, QMessageBox, QFileDialog
+
+import os
 from run_main.Memory.memory_UI import Ui_MainWindow
 from run_main.factory import Create_data
 
 
 class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super().__init__()
+        super(load_memory_ui, self).__init__()
         self.setupUi(self)
         self.setTreeWidget()
-        self.func_descibe.itemClicked.connect(self.print_where_is)
+        # self.func_descibe.itemClicked.connect(self.print_where_is)
         self.ApplyChanges.clicked.connect(self.traverse)
+        self.init_param(self)
+        self.Resetchip.clicked.connect(self.refresh)
+        self.Export.clicked.connect(self.export_excel)
+        self.ApplyChanges.setStyleSheet("background-color:#f8f8ff")
+        self.Resetchip.setStyleSheet("background-color:#f8f8ff")
+        self.software_defaults.setStyleSheet("background-color:#f8f8ff")
+        self.Export.setStyleSheet("background-color:#f8f8ff")
+        with open('qss/QlineEdit.qss', 'r') as f:
+            self.search_register.setStyleSheet(f.read())
+        self.input_addr_data_dist = {"0000": "0x00", "0001": "0x00", "0002": "0x00", "0008": "0x00", "000F": "0x00",
+                                     "0040": "0x00", "0041": "0x00", "0042": "0x00", "0108": "0x00", "0109": "0x00",
+                                     "010A": "0x00", "0110": "0x00"}
+
+    def textBrowser_normal_log(self, info):
+        self.textBrowser.append("<font color='black'>" + "{0} {1}".format(time.strftime("%F %T"), info))
+
+    def textBrowser_error_log(self, info):
+        self.textBrowser.append("<font color='red'>" + '{0} {1}'.format(time.strftime("%F %T"), info))
+
+    @staticmethod
+    def init_param(self):
+        self.func_descibe.clear()
+        self.setTreeWidget()
         self.spi_config_a()
         self.spi_config_b()
         self.chip_configuration()
@@ -33,13 +61,9 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.clkdiv_phase()
         self.clock_driver_and_sysref_control()
         self.clock_delay_control()
-        self.ApplyChanges.setStyleSheet("background-color:#f8f8ff")
-        self.Resetchip.setStyleSheet("background-color:#f8f8ff")
-        self.software_defaults.setStyleSheet("background-color:#f8f8ff")
-        self.Export.setStyleSheet("background-color:#f8f8ff")
-        with open('qss/QlineEdit.qss', 'r') as f:
-            self.search_register.setStyleSheet(f.read())
 
+    def refresh(self):
+        self.init_param(self)
 
     def spi_config_a(self):
         root = QTreeWidgetItem(self.func_descibe)
@@ -50,6 +74,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([3, 4])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         # Soft Reset(self Clearing)
         root1.setText(0, "Soft Reset(self Clearing)")
@@ -90,6 +118,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([0, 2, 3, 4, 5, 6])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Datapath soft reset(self clearing)")
         root1.setText(4, "bits:1,1:Datapath soft reset (self clearing)")
@@ -107,6 +139,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([2, 3, 4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Channel power mode")
         root1.setText(4, "bits:[1:0]")
@@ -121,6 +157,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([2, 3, 4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Channel A/C")
         root1.setText(4, "bits:0,1:receives")
@@ -139,6 +179,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([1, 2, 3, 4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "chip_transfer")
         root1.setText(4, "Bits:0,1:synchronize 0:do nothing")
@@ -152,6 +196,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         create_data_1 = Create_data()
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "chip_fd_a_pin_func")
         root1.setText(4, "bits:[2:0],Fast Detect A/GPIO A0 pin functionality")
@@ -173,6 +221,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         create_data_1 = Create_data()
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "chip_fd_a_pin_func2")
         root1.setText(4, "bits:[3:0],Chip FD_A/GPIO_A0 pin secondary functionality")
@@ -190,6 +242,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         create_data_1 = Create_data()
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "chip_gpio_a1_pin_func")
         root1.setText(4, "bits:[3:0],Chip GPIO_B1 pin functionality")
@@ -208,6 +264,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([3, 4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Clock Divider")
         root1.setText(4, "bits:[2:0],input clock divider(CLK± pins)")
@@ -222,6 +282,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Clock divider phase offset")
         root1.setText(4, "bits:[3:0],Clock divider phase offset")
@@ -236,6 +300,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([4, 5, 6])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Clock divider positive skew window")
         root1.setText(4, "bits:[1:0]")
@@ -258,6 +326,10 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.func_descibe.setItemWidget(root, 3, create_data_1.line)
         create_data_1.setVisable([3, 4, 5, 6, 7])
         self.func_descibe.setItemWidget(root, 4, create_data_1.groupbox_init(self))
+        self.func_descibe.setItemWidget(root, 5, create_data_1.run_btn)
+        create_data_1.run_btn.clicked.connect(
+            lambda: self.run_btn_service(self.func_descibe.currentItem().text(0), create_data_1.line.text()))
+
         root1 = QTreeWidgetItem(root)
         root1.setText(0, "Clock delay mode select")
         root1.setText(4, "bits:[2:0]")
@@ -278,10 +350,65 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         for i in range(0, n):
             item = self.func_descibe.topLevelItem(i)  # 循环获取根节点
             text = item.text(0)  # 根节点文字信息（默认一列）
-            print(text)
+            self.textBrowser_normal_log(self.input_addr_data_dist[text])
+            #
+            # count = item.childCount()  # 获取当前根节点的子节点数量
+            # if count != 0:
+            #     for j in range(0, count):
+            #         string = item.child(j).text(0)  # 子节点的文字信息
+            #         self.textBrowser_normal_log(string)
 
-            count = item.childCount()  # 获取当前根节点的子节点数量
-            if count != 0:
-                for j in range(0, count):
-                    string = item.child(j).text(0)  # 子节点的文字信息
-                    print(string)
+    def run_btn_service(self, addr, data):
+        if addr in self.input_addr_data_dist.keys():
+            self.input_addr_data_dist[addr] = data
+        self.textBrowser_normal_log('addr:%s,data:%s' % (addr, data))
+
+    def export_excel(self):
+        n = self.func_descibe.topLevelItemCount()  # 获取根节点数量
+        ec_content = {}
+        for i in range(0, n):
+            item = self.func_descibe.topLevelItem(i)  # 循环获取根节点
+            fun_addr = item.text(0)  # 根节点文字信息（默认一列）
+            fun_name = item.text(1)
+            fun_data = self.input_addr_data_dist[fun_addr]
+            ec_content[fun_addr] = [fun_name, fun_data]
+        test_seq_file_path = QFileDialog.getExistingDirectory(self, "choose folder", "./",QFileDialog.ShowDirsOnly)
+        if len(test_seq_file_path) == 0:
+            return
+        else:
+            load_memory_ui.write_excel(test_seq_file_path, ec_content)
+            self.textBrowser_normal_log('%s save finish' % path.join(test_seq_file_path, 'memory.xls'))
+
+    @staticmethod
+    def set_stlye(name, height, bold=False):
+        # 初始化样式
+        style = xlwt.XFStyle()
+        # 创建字体
+        font = xlwt.Font()
+        font.bold = bold
+        font.colour_index = 4
+        font.height = height
+        font.name = name
+        style.font = font
+        return style
+
+    @staticmethod
+    def write_excel(filePath, ec_content):
+        '''
+        写excel
+        :param ec_content:
+        :param filePath:
+        :return:
+        '''
+        wb = xlwt.Workbook()
+        sheet = wb.add_sheet('memory_sheet')
+        sheet.write(0, 0, "Address(Hex)", load_memory_ui.set_stlye("Time New Roman", 220, True))
+        sheet.write(0, 1, "Name", load_memory_ui.set_stlye("Time New Roman", 220, True))
+        sheet.write(0, 2, "Data(Hex)", load_memory_ui.set_stlye("Time New Roman", 220, True))
+        row = 1
+        for i in ec_content:
+            sheet.write(row, 0, i)
+            sheet.write(row, 1, ec_content[i][0])
+            sheet.write(row, 2, ec_content[i][1])
+            row += 1
+        wb.save(path.join(filePath, 'memory.xls'))

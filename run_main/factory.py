@@ -7,7 +7,7 @@ Email   : chunjin.zhu@taurentech.net
 File    : factory.py
 Software: PyCharm
 '''
-
+from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtWidgets import QTreeWidgetItem, QHBoxLayout, QLineEdit, QGroupBox, QPushButton
 
 
@@ -24,6 +24,13 @@ class Create_data:
         self.seven = QPushButton("0")
         self.line = QLineEdit()
         self.line.setText("0x00")
+        self.run_btn = QPushButton("apply")
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/images/run-c.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.run_btn.setIcon(icon)
+        self.run_btn.setFixedSize(80,20)
+        with open("qss/qushbutton_style.qss","r") as file:
+            self.run_btn.setStyleSheet(file.read())
         self.h1_layout = QHBoxLayout()
         self.line.setDisabled(True)
         self.zero.clicked.connect(lambda: self.item_change(self.zero))
@@ -88,3 +95,4 @@ class Create_data:
     def line_counting(self):
         text_str = self.seven.text() + self.six.text() + self.five.text() + self.four.text() + self.three.text() + self.two.text() + self.one.text() + self.zero.text()
         self.line.setText(hex(int(text_str, 2)))
+

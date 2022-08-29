@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="参数初始化" />
+    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="参数初始化">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/run_project/apply_changes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AD9208.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AD9208.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/FFT/load_fft_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/FFT/load_fft_panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/Memory/memory_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/Memory/memory_UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/landPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/landPanel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/loadingPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/loadingPanel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/memory_UI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/memory_UI.ui" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,22 +43,22 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/pythonProject/ANALOG DEVICE/qss&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;
+    &quot;last_opened_file_path&quot;: &quot;D:/pythonProject/ANALOG_DEVICE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\ANALOG DEVICE\lib" />
       <recent name="D:\pythonProject\ANALOG DEVICE\qss" />
       <recent name="D:\pythonProject\ANALOG DEVICE\images" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\TRXXXX" />
       <recent name="D:\pythonProject\ANALOG DEVICE" />
-      <recent name="D:\pythonProject\AD9208\ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\ANALOG DEVICE\run_main\Memory" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\TRXXXX" />
       <recent name="D:\pythonProject\ANALOG DEVICE" />
-      <recent name="D:\pythonProject\ANALOG DEVICE\run_main\Memory" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\FFT" />
       <recent name="D:\pythonProject\AD9208" />
     </key>

@@ -60,6 +60,11 @@ class Ui_MainWindow(object):
         self.func_descibe.header().setCascadingSectionResizes(False)
         self.func_descibe.header().setDefaultSectionSize(160)
         self.verticalLayout.addWidget(self.func_descibe)
+        self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
+        self.textBrowser.setObjectName("textBrowser")
+        self.verticalLayout.addWidget(self.textBrowser)
+        self.verticalLayout.setStretch(1, 4)
+        self.verticalLayout.setStretch(2, 1)
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 23))
@@ -84,4 +89,5 @@ class Ui_MainWindow(object):
         self.func_descibe.headerItem().setText(2, _translate("MainWindow", "Functional Group "))
         self.func_descibe.headerItem().setText(3, _translate("MainWindow", "Data(Hex)"))
         self.func_descibe.headerItem().setText(4, _translate("MainWindow", "Data(Binary)"))
+        self.func_descibe.headerItem().setText(5, _translate("MainWindow", "Tools"))
 import ui_pr_rc

@@ -7,18 +7,23 @@ Email   : chunjin.zhu@taurentech.net
 File    : load_fft_panel.py
 Software: PyCharm
 '''
+import time
+
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QDir
 from PyQt5.QtWidgets import QFileDialog, QMessageBox
 
+import ctypes
+import inspect
+import threading
 from run_main.FFT.fft_UI import Ui_MainWindow
-import matlab.engine
-import matlab
+# import matlab.engine
+# import matlab
 
 from run_main.pragh_paint import config_info
 
-engine = matlab.engine.start_matlab()  # 启动matlab
-
+# engine = matlab.engine.start_matlab()  # 启动matlab
+import memory_data_analyze
 
 class load_fft_ui(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -28,6 +33,8 @@ class load_fft_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.file_toolButton.clicked.connect(self.openFile)
         self.run_btn.clicked.connect(self.run_project)
         self.textEdit_2.setStyleSheet("background-color:#949494")
+        self.thread = None
+        self.event = threading.Event()
         with open('qss/groupbox.qss', 'r') as f:
             self.setStyleSheet(f.read())
 
@@ -198,6 +205,18 @@ class load_fft_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         if len(self.file_path_lineinput.text()) == 0:
             QMessageBox.information(self, 'warning', 'please input file!')
         else:
-            self.check_param()
-            engine.memory_data_analyze(self.file_path_lineinput.text(), self.config_transfer,
-                                       self.param_transfer)
+            if self.thread:
+                self.event.set()
+                self.event = threading.Event()
+            self.thread = threading.Thread(target=self.run_file)
+            self.thread.start()
+
+
+    def run_file(self):
+        self.check_param()
+        fft_calc = memory_data_analyze.initialize()
+        fft_calc.memory_data_analyze(self.file_path_lineinput.text(), self.config_transfer,
+                                     self.param_transfer)
+        self.event.wait()
+        
+

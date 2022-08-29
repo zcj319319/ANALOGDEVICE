@@ -17,7 +17,7 @@ from run_main.TRXXXX.load_TRXXX import TRPanel_operation
 
 class LoadPanel(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super().__init__()
+        super(LoadPanel, self).__init__()
         self.setupUi(self)
         self.setWindowTitle("Evaluation platform")
         icon = QtGui.QIcon()
@@ -37,7 +37,15 @@ class LoadPanel(QtWidgets.QMainWindow, Ui_MainWindow):
         self.stackedWidget.insertWidget(3,self.fft_panel)
         self.help = QtWidgets.QWidget()
         self.stackedWidget.insertWidget(4,self.help)
-
+        self.setStyleSheet('''
+                            QTextBrowser{
+                                    border: 1px solid gray;
+                                    border-radius:10px;
+                                    margin-top:4ex;
+                                    font-family:SegoeUI;
+                                    font:bold 12px;
+                                }
+                            ''')
     def item_list_clicked(self):
         item = self.listWidget.selectedItems()[0]
         if item.text() == "Home":

@@ -24,7 +24,7 @@ from numpy import array
 from AD9802 import Ui_MainWindow
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5 import NavigationToolbar2QT as NavigationToolbar
-import matlab.engine
+# import matlab.engine
 import matlab
 import matplotlib.pyplot as plt
 import win32gui
@@ -35,7 +35,7 @@ from matlab_file.plot_file import f_flip
 from run_main.factory import Create_data
 from run_main.pragh_paint import config_info, param_info
 
-engine = matlab.engine.start_matlab()  # 启动matlab
+# engine = matlab.engine.start_matlab()  # 启动matlab
 
 
 class LoadingPanel(QtWidgets.QMainWindow, Ui_MainWindow):
