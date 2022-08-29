@@ -1,0 +1,17 @@
+QPushButton:hover{
+	color: red;
+	border-color: green;
+    background-color: aqua;
+}
+
+QPushButton:pressed{
+	color: green;
+	border-color: blueviolet;
+    background-color: black;
+}
+
+QPushButton:disabled{
+	color: blue;
+	border-color: brown;
+    background-color: aqua;
+}
