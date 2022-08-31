@@ -1,4 +1,4 @@
-function [performance]=fft_calc_tot(vin,fs,resolution,f_num,para)
+function performance=fft_calc_tot(vin,fs,resolution,f_num,para)
 %% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % zhouliren 2020
@@ -657,7 +657,7 @@ SFDR_dbfs=SFDR_dbc-SIG1_dbfs;
 FullscalePower=10*log10((fullscale/1000/2)^2/2/Rl*1000);
 if resolution~=0
     % if ADC, already normalize
-    NoiseFloor_dbfs=10*log10(pow_noise)-10*log10(fs/dacOSR/2); % divide first nyquist BW
+    NoiseFloor_dbfs=10*(log10(pow_noise)-log10(fs/dacOSR/2)); % divide first nyquist BW
 else
     NoiseFloor_dbfs=10*log10(pow_noise)-10*log10(fs/dacOSR/2)-20*log10(fullscale/2/1000); % noise Amplitude/fullscale Amplitude
 end
@@ -820,9 +820,9 @@ performance.index_SIG1=index_SIG1;
 %% plot
 if plot_option==1
     if figure_overwrite~=1
-        figure;
+        h=figure;
     else
-        figure(f_num);
+        h=figure(f_num);
     end
     if plot_range~=0
         plot_range=min(plot_range,dacOSR);  % for dac, plot more than 1 nq zone, but limit to full zone
@@ -840,7 +840,11 @@ if plot_option==1
     grid on;
     set(gca,'Ytick',-150:10:90);
     hold on;
-
+    jFrame = get(h,'JavaFrame');	 
+    pause(0.1);					 
+    set(jFrame,'Maximized',1);	%设置其最大化为真（0 为假）
+    pause(0.1);					 
+    warning('on','MATLAB:HandleGraphics:ObsoletedProperty:JavaFrame');		% 打开相关警告设置
     % sig 
     sig_ind=f_trans((index_SIG1-1),N_fft,fs,nq);
     sig_yrange= 20*log10(mag_all(f_flip(index_SIG1,nq)));

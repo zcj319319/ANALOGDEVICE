@@ -12,9 +12,9 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from run_main.TRXXXX.load_TRXXX import TRPanel_operation
+# from run_main.TRXXXX.load_TRXXX import TRPanel_operation
 from run_main.landPanel import LoadPanel
-from run_main.loadingPanel import LoadingPanel
+# from run_main.loadingPanel import LoadingPanel
 
 app = QtWidgets.QApplication(sys.argv)
 

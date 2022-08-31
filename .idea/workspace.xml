@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="参数初始化">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/run_main/run_project/apply_changes.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AD9208.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AD9208.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="matlab + python调用matalab runtime">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/FFT/load_fft_panel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/FFT/load_fft_panel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run_main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fft_calc_tot.m" beforeDir="false" afterPath="$PROJECT_DIR$/fft_calc_tot.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memory_data_analyze.m" beforeDir="false" afterPath="$PROJECT_DIR$/memory_data_analyze.m" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/Memory/memory_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/Memory/memory_UI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/factory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/landPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/landPanel.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/run_main/loadingPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/loadingPanel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/memory_UI.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/memory_UI.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,11 +43,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\ANALOG_DEVICE" />
       <recent name="D:\pythonProject\ANALOG DEVICE\lib" />
       <recent name="D:\pythonProject\ANALOG DEVICE\qss" />
       <recent name="D:\pythonProject\ANALOG DEVICE\images" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\TRXXXX" />
-      <recent name="D:\pythonProject\ANALOG DEVICE" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\Memory" />
@@ -151,7 +145,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656673019451</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="matlab + python调用matalab runtime">
+      <created>1661769907156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1661769907156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="matlab + python调用matalab runtime">
+      <created>1661769922003</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661769922003</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,22 +175,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="参数初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="参数初始化" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/run_main/loadingPanel.py</url>
-          <line>577</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/run_main/loadingPanel.py</url>
-          <line>582</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="matlab + python调用matalab runtime" />
+    <option name="LAST_COMMIT_MESSAGE" value="matlab + python调用matalab runtime" />
   </component>
 </project>

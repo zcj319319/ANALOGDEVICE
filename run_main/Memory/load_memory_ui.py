@@ -11,7 +11,7 @@ import time
 from os import path
 
 import xlwt
-from PyQt5 import QtWidgets
+from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtWidgets import QTreeWidgetItem, QHeaderView, QMessageBox, QFileDialog
 
 import os
@@ -38,6 +38,25 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
         self.input_addr_data_dist = {"0000": "0x00", "0001": "0x00", "0002": "0x00", "0008": "0x00", "000F": "0x00",
                                      "0040": "0x00", "0041": "0x00", "0042": "0x00", "0108": "0x00", "0109": "0x00",
                                      "010A": "0x00", "0110": "0x00"}
+        self.search_register.returnPressed.connect(lambda: self.search_register_regx_text(self.search_register.text()))
+
+    def search_register_regx_text(self, full_text):
+        n = self.func_descibe.topLevelItemCount()  # 获取根节点数量
+        if full_text == "":
+            for i in range(0, n):
+                self.func_descibe.setRowHidden(i, self.func_descibe.indexFromItem(self.func_descibe.topLevelItem(i).parent()), False)
+        finditems = self.func_descibe.findItems(full_text, QtCore.Qt.MatchContains, 1)
+        if len(finditems) > 0:
+            for i in range(0, n):
+                if self.func_descibe.topLevelItem(i) in finditems:
+                    self.func_descibe.setRowHidden(i, self.func_descibe.indexFromItem(
+                        self.func_descibe.topLevelItem(i).parent()), False)
+                else:
+                    self.func_descibe.setRowHidden(i, self.func_descibe.indexFromItem(
+                        self.func_descibe.topLevelItem(i).parent()), True)
+        else:
+            for i in range(0, n):
+                self.func_descibe.setRowHidden(i, self.func_descibe.indexFromItem(self.func_descibe.topLevelItem(i).parent()), False)
 
     def textBrowser_normal_log(self, info):
         self.textBrowser.append("<font color='black'>" + "{0} {1}".format(time.strftime("%F %T"), info))
@@ -372,7 +391,7 @@ class load_memory_ui(QtWidgets.QMainWindow, Ui_MainWindow):
             fun_name = item.text(1)
             fun_data = self.input_addr_data_dist[fun_addr]
             ec_content[fun_addr] = [fun_name, fun_data]
-        test_seq_file_path = QFileDialog.getExistingDirectory(self, "choose folder", "./",QFileDialog.ShowDirsOnly)
+        test_seq_file_path = QFileDialog.getExistingDirectory(self, "choose folder", "./", QFileDialog.ShowDirsOnly)
         if len(test_seq_file_path) == 0:
             return
         else:

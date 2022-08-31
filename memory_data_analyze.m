@@ -1,4 +1,4 @@
-function [perf] = memory_data_analyze(path,config,para)
+function perf = memory_data_analyze(path,config,para)
     data = textread(path, '%s');
     data = hex2dec(data);
 	sample_rate = config.sample_rate;
@@ -75,5 +75,6 @@ function [perf] = memory_data_analyze(path,config,para)
     dcm=1;
     fs = sample_rate/dcm;
     perf=fft_calc_tot(data_temp,fs,2,1,para);
+    disp(perf);
 end
 
