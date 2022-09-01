@@ -8,11 +8,13 @@ File    : landPanel.py
 Software: PyCharm
 '''
 from PyQt5 import QtWidgets, QtGui
+from PyQt5.QtWidgets import QTabWidget
 
 from analog_device import Ui_MainWindow
 from run_main.FFT.load_fft_panel import load_fft_ui
 from run_main.Memory.load_memory_ui import load_memory_ui
-from run_main.TRXXXX.load_TRXXX import TRPanel_operation
+from run_main.TRXXXX.box_link.loadingPanel_box import LoadingPanel_box
+from run_main.TRXXXX.usb_link.load_TRXXX import TRPanel_operation
 
 
 class LoadPanel(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -29,8 +31,17 @@ class LoadPanel(QtWidgets.QMainWindow, Ui_MainWindow):
         self.home.setStyleSheet("background-color:#949494")
         self.listWidget.setCurrentRow(0)
         self.stackedWidget.setCurrentIndex(0)
+
         self.tr_panel = TRPanel_operation()
-        self.stackedWidget.insertWidget(1, self.tr_panel)
+        self.tabwidget = QTabWidget(self.stackedWidget)
+        self.tabwidget.setTabShape(QTabWidget.TabShape.Triangular)
+        self.tabwidget.addTab(self.tr_panel,"USB-Link")
+        self.tr_panel_box = LoadingPanel_box()
+        self.tabwidget.addTab(self.tr_panel_box,"BOX-Link")
+        with open('qss/qtabwidget.qss','r') as file:
+            self.tabwidget.setStyleSheet(file.read())
+        self.stackedWidget.insertWidget(1, self.tabwidget)
+
         self.memory_panel = load_memory_ui()
         self.stackedWidget.insertWidget(2,self.memory_panel)
         self.fft_panel=load_fft_ui()

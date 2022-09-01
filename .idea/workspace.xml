@@ -1,13 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="matlab + python调用matalab runtime">
+    <list default="true" id="1afa0a19-15ae-48c7-96e1-dd6b77da7b6a" name="Default Changelist" comment="搜索树的开发">
+      <change afterPath="$PROJECT_DIR$/qss/qtabwidget.qss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/OFF.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/head_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/logo.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/logo.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/logo_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/on.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/status.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/status_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/struc.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/struc_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/structure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/ui.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/ui.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/xxx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/xxx.qrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/xxx_rc.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/xxxx.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/redesigner_ui/xxxx.qrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run_main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Run_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fft_calc_tot.m" beforeDir="false" afterPath="$PROJECT_DIR$/fft_calc_tot.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memory_data_analyze.m" beforeDir="false" afterPath="$PROJECT_DIR$/memory_data_analyze.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/Memory/load_memory_ui.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_main/loadingPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/loadingPanel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/TRXXXX/ControlSPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/TRXXXX/box_link/ControlSPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/TRXXXX/ControlSPI_FT4232.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/TRXXXX/usb_link/ControlSPI_FT4232.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/TRXXXX/TR_UI.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/TRXXXX/usb_link/TR_UI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/TRXXXX/load_TRXXX.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/TRXXXX/usb_link/load_TRXXX.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_main/landPanel.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_main/landPanel.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,28 +54,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/pythonProject/ANALOG_DEVICE&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/pythonProject/ANALOG_DEVICE/run_main/TRXXXX/box_link",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\ANALOG_DEVICE\run_main\TRXXXX\box_link" />
       <recent name="D:\pythonProject\ANALOG_DEVICE" />
       <recent name="D:\pythonProject\ANALOG DEVICE\lib" />
       <recent name="D:\pythonProject\ANALOG DEVICE\qss" />
       <recent name="D:\pythonProject\ANALOG DEVICE\images" />
-      <recent name="D:\pythonProject\ANALOG DEVICE\run_main\TRXXXX" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\pythonProject\ANALOG_DEVICE\run_main\TRXXXX\box_link" />
+      <recent name="D:\pythonProject\ANALOG_DEVICE\run_main\TRXXXX\usb_link" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\Memory" />
       <recent name="D:\pythonProject\ANALOG DEVICE\run_main\TRXXXX" />
       <recent name="D:\pythonProject\ANALOG DEVICE" />
-      <recent name="D:\pythonProject\ANALOG DEVICE\run_main\FFT" />
-      <recent name="D:\pythonProject\AD9208" />
     </key>
   </component>
   <component name="RunManager" selected="Python.Run_main">
@@ -159,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661769922003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="搜索树的开发">
+      <created>1661938804788</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661938804788</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -176,6 +204,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="参数初始化" />
     <MESSAGE value="matlab + python调用matalab runtime" />
-    <option name="LAST_COMMIT_MESSAGE" value="matlab + python调用matalab runtime" />
+    <MESSAGE value="搜索树的开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="搜索树的开发" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/run_main/TRXXXX/box_link/loadingPanel_box.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
